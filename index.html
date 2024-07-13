@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS Operations Menu</h1>
+    <form id="awsForm" action="/aws_operations" method="post">
+        <label>Select an operation:</label>
+        <select name="operation">
+            <option value="launch_ec2">Launch EC2 Instance</option>
+            <option value="list_s3">List S3 Buckets</option>
+            <option value="create_lambda">Create Lambda Function</option>
+            <option value="send_email">Send Email via SES</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Execute Operation">
+    </form>
+</body>
+</html>
